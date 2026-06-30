@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevStore - Elevate Your Craft, Showcase Your Impact</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Lexend for extreme readability & neobrutalist vibe -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Brutalist Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind Custom Configuration for Brutalist Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Lexend', 'sans-serif'],
+                    },
+                    colors: {
+                        brutalYellow: '#FFDE4D',
+                        brutalOrange: '#FFB200',
+                        brutalCyan: '#22D3EE',
+                        brutalGreen: '#4ADE80',
+                        brutalPink: '#F472B6',
+                        brutalPurple: '#A78BFA',
+                        brutalDark: '#1E1B4B',
+                        brutalBg: '#FEF9F2',
+                    },
+                    boxShadow: {
+                        'brutal': '4px 4px 0px 0px #000000',
+                        'brutal-lg': '8px 8px 0px 0px #000000',
+                        'brutal-xl': '12px 12px 0px 0px #000000',
+                        'brutal-sm': '2px 2px 0px 0px #000000',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Neobrutalist interactive transition setups */
+        .neo-btn {
+            transition: all 0.15s ease-in-out;
+        }
+        .neo-btn:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 10px 10px 0px 0px #000000;
+        }
+        .neo-btn:active {
+            transform: translate(4px, 4px);
+            box-shadow: 2px 2px 0px 0px #000000;
+        }
+        
+        /* Custom scrollbar for brutalist look */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1E1B4B;
+            border-left: 4px solid #000000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FFDE4D;
+            border: 3px solid #1E1B4B;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-brutalBg text-black font-sans min-h-screen selection:bg-brutalPink selection:text-black">
+
+    <!-- NAVIGATION HEADER -->
+    <nav class="sticky top-0 z-50 bg-brutalYellow border-b-4 border-black p-4 md:p-5">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="bg-black text-brutalYellow p-2 px-4 border-2 border-black font-extrabold text-2xl tracking-tight shadow-brutal transition-transform group-hover:rotate-[-2deg]">
+                    DEVSTORE_
+                </div>
+                <span class="font-extrabold text-xl tracking-tight hidden sm:inline text-black">DIREKTORI PROYEK INTEGRATIF</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <div class="flex flex-wrap justify-center gap-3 md:gap-6 font-bold text-sm md:text-base">
+                <a href="#masalah" class="hover:underline bg-white px-3 py-1 border-2 border-black rounded shadow-brutal-sm hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all">Masalah</a>
+                <a href="#tujuan" class="hover:underline bg-white px-3 py-1 border-2 border-black rounded shadow-brutal-sm hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all">Tujuan</a>
+                <a href="#galeri" class="hover:underline bg-white px-3 py-1 border-2 border-black rounded shadow-brutal-sm hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all">Galeri</a>
+                <a href="#manfaat" class="hover:underline bg-white px-3 py-1 border-2 border-black rounded shadow-brutal-sm hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all">Manfaat</a>
+            </div>
+
+            <!-- Header CTA -->
+            <div>
+                <a href="#galeri" class="bg-brutalPink text-black font-extrabold px-5 py-2.5 border-3 border-black rounded shadow-brutal hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-brutal-sm transition-all inline-block border-2 border-black">
+                    Lihat Galeri <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="py-12 px-4 md:py-20 bg-brutalBg border-b-4 border-black relative overflow-hidden">
+        <!-- Background accents -->
+        <div class="absolute top-10 right-10 w-24 h-24 bg-brutalPurple border-4 border-black rounded-full hidden md:block opacity-60"></div>
+        <div class="absolute bottom-10 left-10 w-16 h-16 bg-brutalGreen border-4 border-black rotate-12 hidden md:block opacity-60"></div>
+        
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <!-- Left Side: Copywriting -->
+            <div class="lg:col-span-7 flex flex-col justify-center space-y-6">
+                <!-- Highlight Badge -->
+                <div class="inline-flex items-center gap-2 self-start bg-brutalGreen text-black font-black text-xs md:text-sm uppercase tracking-wider px-3 py-1.5 border-2 border-black rounded shadow-brutal-sm rotate-[-1deg]">
+                    <i class="fa-solid fa-circle-check"></i> PROYEK DIREKTORI TERINTEGRASI #1 UNTUK DEVELOPER
+                </div>
+                
+                <!-- Main Bold Title -->
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight text-black tracking-tighter">
+                    Elevate Your Craft,<br>
+                    <span class="bg-brutalYellow border-2 border-black px-2 inline-block my-1 transform -rotate-1">Showcase Your</span><br>
+                    <span class="bg-brutalPink border-2 border-black px-2 inline-block my-1 transform rotate-1 text-black">Impact!</span>
+                </h1>
+
+                <!-- Tagline -->
+                <p class="text-lg md:text-xl font-medium text-slate-800 leading-relaxed max-w-2xl bg-white border-3 border-black p-4 rounded shadow-brutal border-2 border-black">
+                    DevStore adalah direktori terintegrasi yang dirancang khusus untuk memfasilitasi developer berbakat mengelola, memverifikasi, dan memamerkan proyek digital terbaik mereka secara instan dan profesional.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#galeri" class="bg-brutalYellow text-black font-black text-lg px-8 py-4 border-4 border-black rounded shadow-brutal-lg hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-brutal-sm transition-all text-center">
+                        Lihat Galeri <i class="fa-solid fa-images ml-2"></i>
+                    </a>
+                    <a href="#masalah" class="bg-white text-black font-bold text-lg px-6 py-4 border-4 border-black rounded shadow-brutal hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[7px_7px_0px_0px_rgba(0,0,0,1)] active:translate-x-[3px] active:translate-y-[3px] active:shadow-brutal-sm transition-all text-center">
+                        Pelajari Dulu
+                    </a>
+                </div>
+
+                <!-- Stats Badges -->
+                <div class="grid grid-cols-3 gap-3 pt-6 max-w-lg">
+                    <div class="bg-brutalCyan p-2 border-2 border-black rounded shadow-brutal-sm text-center">
+                        <div class="font-black text-xl md:text-2xl">100%</div>
+                        <div class="text-[10px] font-bold uppercase">Terstandarisasi</div>
+                    </div>
+                    <div class="bg-brutalOrange p-2 border-2 border-black rounded shadow-brutal-sm text-center">
+                        <div class="font-black text-xl md:text-2xl">Instant</div>
+                        <div class="text-[10px] font-bold uppercase">JSON Import</div>
+                    </div>
+                    <div class="bg-brutalGreen p-2 border-2 border-black rounded shadow-brutal-sm text-center">
+                        <div class="font-black text-xl md:text-2xl">Verified</div>
+                        <div class="text-[10px] font-bold uppercase">Oleh Recruiter</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Interactive Hero Live JSON Playground -->
+            <div class="lg:col-span-5">
+                <div class="bg-white border-4 border-black rounded shadow-brutal-lg overflow-hidden p-8 text-center">
+                    <h2 class="text-3xl font-black mb-4">Siap untuk Berkolaborasi?</h2>
+                    <p class="mb-6 font-bold text-slate-700">DevStore membantu developer menampilkan karya dengan lebih profesional.</p>
+                    <a href="#galeri" class="bg-brutalPink text-black font-extrabold px-6 py-3 border-4 border-black rounded shadow-brutal inline-block hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">Lihat Galeri Proyek</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PROBLEM STATEMENT & COMPARISON SECTION -->
+    <section id="masalah" class="py-16 px-4 bg-brutalDark text-white border-b-4 border-black relative">
+        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brutalPink text-black font-extrabold text-lg px-6 py-2 border-4 border-black rounded shadow-brutal uppercase tracking-wider whitespace-nowrap">
+            Latar Belakang & Analisis Realita
+        </div>
+
+        <div class="max-w-7xl mx-auto mt-6">
+            <!-- Header Statement -->
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <h2 class="text-3xl md:text-5xl font-black text-brutalYellow tracking-tight leading-none">
+                    KENAPA PORTFOLIO MANUAL ANDA TIDAK LAGI BERHASIL?
+                </h2>
+                <p class="text-slate-300 font-bold text-base md:text-lg">
+                    Saat ini, banyak developer berbakat kesulitan menonjol di pasar kerja karena karya terbaik mereka tersebar di berbagai platform yang tidak terintegrasi (GitHub, file lokal, atau link portofolio yang sudah tidak aktif).
+                </p>
+            </div>
+
+            <!-- Side-by-Side Comparison Matrix -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                <!-- Realita Manual Card -->
+                <div class="bg-white text-black border-4 border-black rounded-lg shadow-brutal-lg overflow-hidden flex flex-col justify-between">
+                    <div class="bg-red-500 text-white p-4 font-black text-xl border-b-4 border-black flex items-center gap-3">
+                        <i class="fa-solid fa-triangle-exclamation text-2xl"></i> REALITA SEKARANG (MANUAL)
+                    </div>
+                    
+                    <div class="p-6 space-y-4 flex-grow">
+                        <p class="font-bold text-slate-700 italic border-l-4 border-red-500 pl-3">
+                            "Portofolio berserakan, tidak terorganisir, sulit dicari, dan kurang memberikan konteks teknis mendalam bagi pihak luar."
+                        </p>
+                        
+                        <ul class="space-y-3.5">
+                            <li class="flex items-start gap-3">
+                                <span class="bg-red-100 text-red-700 border border-red-400 p-1 px-2 rounded font-black text-xs mt-0.5">X</span>
+                                <span class="font-semibold text-sm">Proses input manual yang lambat dan melelahkan satu per satu di platform pembuat situs biasa.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="bg-red-100 text-red-700 border border-red-400 p-1 px-2 rounded font-black text-xs mt-0.5">X</span>
+                                <span class="font-semibold text-sm">Metadata tech-stack tidak konsisten dan tidak terstandarisasi untuk dicari.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="bg-red-100 text-red-700 border border-red-400 p-1 px-2 rounded font-black text-xs mt-0.5">X</span>
+                                <span class="font-semibold text-sm">Screenshots & demo tidak terverifikasi dengan baik sehingga rekruter sering skeptis.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="bg-red-100 text-red-700 border border-red-400 p-1 px-2 rounded font-black text-xs mt-0.5">X</span>
+                                <span class="font-semibold text-sm">Proses kurasi portofolio rekruter berjalan lambat & terhambat standarisasi.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-100 p-4 border-t-4 border-black text-center font-bold text-red-600 text-sm">
+                        ⚠️ Menyebabkan Rekruter & Klien Melewatkan Potensi Terbaik Anda.
+                    </div>
+                </div>
+
+                <!-- Solution DevStore Card -->
+                <div class="bg-brutalGreen text-black border-4 border-black rounded-lg shadow-brutal-lg overflow-hidden flex flex-col justify-between">
+                    <div class="bg-black text-brutalGreen p-4 font-black text-xl border-b-4 border-black flex items-center gap-3">
+                        <i class="fa-solid fa-star-of-life text-2xl text-brutalYellow animate-spin"></i> HARAPAN & SOLUSI: DEVSTORE
+                    </div>
+                    
+                    <div class="p-6 space-y-4 flex-grow">
+                        <p class="font-bold text-black italic border-l-4 border-black pl-3">
+                            "Sebuah ekosistem terpadu di mana setiap proyek digital terdokumentasi dengan standar seragam & visualisasi real-time."
+                        </p>
+                        
+                        <ul class="space-y-3.5">
+                            <li class="flex items-start gap-3">
+                                <span class="bg-black text-brutalGreen border border-black p-1 px-2 rounded font-black text-xs mt-0.5">✓</span>
+                                <span class="font-extrabold text-sm">Sistem Impor JSON Pintar: Buat portofolio kompleks dalam 3 detik saja.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="bg-black text-brutalGreen border border-black p-1 px-2 rounded font-black text-xs mt-0.5">✓</span>
+                                <span class="font-extrabold text-sm">Kurasi tech-stack otomatis (klasifikasi framework, bahasa, & DB secara rapi).</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="bg-black text-brutalGreen border border-black p-1 px-2 rounded font-black text-xs mt-0.5">✓</span>
+                                <span class="font-extrabold text-sm">Dokumentasi teknis terstandar & screenshot tervisualisasi sistematis.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="bg-black text-brutalGreen border border-black p-1 px-2 rounded font-black text-xs mt-0.5">✓</span>
+                                <span class="font-extrabold text-sm">Akses pencarian global bagi rekruter dan klien luar untuk pencarian bakat instan.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-black text-brutalGreen p-4 text-center font-extrabold text-sm">
+                        ⚡ Menjembatani Kompleksitas Teknis Dengan Visualisasi yang Menarik!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OBJECTIVES SECTION -->
+    <section id="tujuan" class="py-16 px-4 bg-brutalBg border-b-4 border-black">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div class="space-y-3">
+                    <span class="bg-brutalOrange text-black font-extrabold text-xs uppercase px-2 py-1 border-2 border-black rounded shadow-brutal-sm">Objectives</span>
+                    <h2 class="text-3xl md:text-5xl font-black text-black tracking-tight uppercase">
+                        Tujuan Utama DevStore
+                    </h2>
+                </div>
+                <p class="text-slate-700 font-bold max-w-md text-sm md:text-base">
+                    Kami mendedikasikan platform ini untuk merevolusi ekosistem kurasi bakat developer dengan 4 pilar objektif:
+                </p>
+            </div>
+
+            <!-- Objectives Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white border-4 border-black p-6 rounded shadow-brutal hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-brutal-lg transition-all flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="bg-brutalYellow w-12 h-12 rounded border-2 border-black flex items-center justify-center text-xl font-black shadow-brutal-sm">
+                            01
+                        </div>
+                        <h3 class="text-xl font-extrabold tracking-tight">Digitalisasi Portofolio</h3>
+                        <p class="text-sm font-semibold text-slate-700 leading-relaxed">
+                            Mengubah cara developer mendokumentasikan karya dari format terpisah-pisah menjadi satu database proyek yang terstruktur.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-slate-200 text-xs font-black text-slate-400 uppercase">Structured Database</div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-brutalCyan border-4 border-black p-6 rounded shadow-brutal hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-brutal-lg transition-all flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="bg-white w-12 h-12 rounded border-2 border-black flex items-center justify-center text-xl font-black shadow-brutal-sm">
+                            02
+                        </div>
+                        <h3 class="text-xl font-extrabold tracking-tight">Automasi Kurasi</h3>
+                        <p class="text-sm font-semibold text-black leading-relaxed">
+                            Mempercepat proses input dan verifikasi data proyek secara masif melalui fitur impor JSON data yang sangat efisien.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-black/10 text-xs font-black text-black/60 uppercase">Fast Data Import</div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-brutalPink border-4 border-black p-6 rounded shadow-brutal hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-brutal-lg transition-all flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="bg-white w-12 h-12 rounded border-2 border-black flex items-center justify-center text-xl font-black shadow-brutal-sm">
+                            03
+                        </div>
+                        <h3 class="text-xl font-extrabold tracking-tight">Standarisasi Informasi</h3>
+                        <p class="text-sm font-semibold text-black leading-relaxed">
+                            Menciptakan format showcase yang seragam untuk memudahkan rekruter/asesor melakukan evaluasi teknis yang objektif.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-black/10 text-xs font-black text-black/60 uppercase">Uniform Formatting</div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white border-4 border-black p-6 rounded shadow-brutal hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-brutal-lg transition-all flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="bg-brutalGreen w-12 h-12 rounded border-2 border-black flex items-center justify-center text-xl font-black shadow-brutal-sm">
+                            04
+                        </div>
+                        <h3 class="text-xl font-extrabold tracking-tight">Transparansi Kompetensi</h3>
+                        <p class="text-sm font-semibold text-slate-700 leading-relaxed">
+                            Menyajikan data proyek autentik yang dilengkapi dengan informasi dokumentasi teknis mendalam dan demo yang terverifikasi.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-slate-200 text-xs font-black text-slate-400 uppercase">Verified Competence</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE INTERACTIVE SIMULATOR SECTION -->
+    <section id="demo" class="hidden py-16 px-4 bg-white border-b-4 border-black">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-4">
+                <span class="bg-brutalYellow text-black font-extrabold text-xs uppercase px-3 py-1.5 border-2 border-black rounded shadow-brutal-sm">INTERACTIVE COMPONENT</span>
+                <h2 class="text-3xl md:text-5xl font-black tracking-tight text-black">
+                    UJI KECANGGIHAN KAMI SEKARANG!
+                </h2>
+                <p class="text-slate-700 font-bold text-sm md:text-base">
+                    Simulasikan sistem pengelolaan database, kurasi project, dan filter real-time seakan-akan Anda sedang mengoperasikan DevStore.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                
+                <!-- Left: Interactive JSON Import Panel (lg:col-span-5) -->
+                <div class="lg:col-span-5 bg-brutalBg border-4 border-black rounded shadow-brutal-lg p-6">
+                    <h3 class="text-xl font-extrabold mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-file-code text-brutalOrange"></i> 1. Impor Portofolio JSON
+                    </h3>
+                    <p class="text-xs text-slate-700 font-bold mb-4">
+                        Sunting detail data di editor input ini untuk langsung mengevaluasi kecocokan layout otomatis:
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="relative">
+                            <label class="block text-xs font-black uppercase text-slate-600 mb-1">Pilih Template Cepat:</label>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <button onclick="loadTemplate('fintech')" class="bg-white hover:bg-brutalYellow text-xs font-extrabold p-1.5 px-3 border-2 border-black rounded shadow-brutal-sm transition-all active:translate-y-0.5 active:shadow-none">Fintech App</button>
+                                <button onclick="loadTemplate('iot')" class="bg-white hover:bg-brutalCyan text-xs font-extrabold p-1.5 px-3 border-2 border-black rounded shadow-brutal-sm transition-all active:translate-y-0.5 active:shadow-none">IoT Dashboard</button>
+                                <button onclick="loadTemplate('game')" class="bg-white hover:bg-brutalPink text-xs font-extrabold p-1.5 px-3 border-2 border-black rounded shadow-brutal-sm transition-all active:translate-y-0.5 active:shadow-none">Retro Arcade</button>
+                            </div>
+                        </div>
+
+                        <!-- Main Code Playground Area -->
+                        <div>
+                            <textarea id="mainJsonInput" class="w-full h-64 bg-slate-900 text-lime-400 font-mono text-xs p-4 rounded-lg border-4 border-black shadow-brutal-sm focus:outline-none focus:ring-4 focus:ring-brutalYellow resize-y">{
+  "developer": "Yuki Harsono",
+  "projectTitle": "Smart FinPay Core Engine",
+  "category": "Keuangan (Fintech)",
+  "techStack": ["Golang", "PostgreSQL", "Kafka", "Redis"],
+  "status": "Production Ready",
+  "stars": 128,
+  "description": "Mesin transaksi terenkripsi ultra-cepat dengan arsitektur mikroservis.",
+  "demoUrl": "https://pay.smartfin.co"
+}</textarea>
+                        </div>
+                        
+                        <div class="flex justify-between items-center bg-white p-3 border-2 border-black rounded">
+                            <span class="text-xs font-bold text-slate-600">Status Validasi JSON:</span>
+                            <span id="jsonStatusBadge" class="bg-brutalGreen text-black text-xs font-black px-2 py-1 rounded border border-black">
+                                <i class="fa-solid fa-circle-check mr-1"></i> VALID JSON
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Directory Filter Showcase Mock (lg:col-span-7) -->
+                <div class="lg:col-span-7 space-y-6">
+                    <!-- Step 2 Title -->
+                    <div class="bg-black text-white p-4 border-4 border-black rounded shadow-brutal flex justify-between items-center">
+                        <h3 class="text-lg font-black uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass text-brutalCyan"></i> 2. Eksplorasi & Filter Direktori
+                        </h3>
+                        <span class="text-xs font-bold bg-brutalOrange text-black px-2 py-0.5 rounded border border-black">Admin & Recruiter View</span>
+                    </div>
+
+                    <!-- Tech Filter Tags (Clickable!) -->
+                    <div class="bg-brutalYellow p-4 border-4 border-black rounded shadow-brutal space-y-2">
+                        <div class="text-xs font-black uppercase text-slate-800">Cari Cepat Berdasarkan Tech-Stack Terkurasi:</div>
+                        <div class="flex flex-wrap gap-2" id="filterContainer">
+                            <button onclick="filterProjects('all')" class="filter-btn active-filter bg-black text-white text-xs font-black px-3 py-1.5 border-2 border-black rounded shadow-brutal-sm transition-all">
+                                Semua Project
+                            </button>
+                            <button onclick="filterProjects('Golang')" class="filter-btn bg-white hover:bg-brutalCyan text-black text-xs font-black px-3 py-1.5 border-2 border-black rounded shadow-brutal-sm transition-all">
+                                Golang
+                            </button>
+                            <button onclick="filterProjects('React')" class="filter-btn bg-white hover:bg-brutalPink text-black text-xs font-black px-3 py-1.5 border-2 border-black rounded shadow-brutal-sm transition-all">
+                                React
+                            </button>
+                            <button onclick="filterProjects('Python')" class="filter-btn bg-white hover:bg-brutalPurple text-black text-xs font-black px-3 py-1.5 border-2 border-black rounded shadow-brutal-sm transition-all">
+                                Python
+                            </button>
+                            <button onclick="filterProjects('PostgreSQL')" class="filter-btn bg-white hover:bg-brutalGreen text-black text-xs font-black px-3 py-1.5 border-2 border-black rounded shadow-brutal-sm transition-all">
+                                PostgreSQL
+                            </button>
+                            <button onclick="filterProjects('Redis')" class="filter-btn bg-white text-black text-xs font-black px-3 py-1.5 border-2 border-black rounded shadow-brutal-sm transition-all">
+                                Redis
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Live Rendered Grid Container (Dynamic) -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="projectsGrid">
+                        <!-- Dynamic User Custom Card (Always first) -->
+                        <div id="customProjectWrapper" class="md:col-span-2 bg-brutalPink border-4 border-black p-5 rounded shadow-brutal transition-transform">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="bg-black text-white text-[10px] font-black tracking-widest px-2 py-1 rounded border border-white" id="outDevName">
+                                    Yuki Harsono
+                                </span>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs font-bold bg-white text-black px-2 py-0.5 border border-black rounded-full" id="outStatus">
+                                        🚀 Production Ready
+                                    </span>
+                                    <span class="text-xs font-black text-slate-800 bg-brutalYellow px-2 py-0.5 border border-black rounded" id="outStars">
+                                        ⭐ 128
+                                    </span>
+                                </div>
+                            </div>
+                            <h4 class="text-2xl font-black mb-1 text-black" id="outTitle">Smart FinPay Core Engine</h4>
+                            <p class="text-xs font-bold text-slate-900 bg-white/60 p-1.5 border border-black rounded mb-2 inline-block" id="outCategory">
+                                Kategori: Keuangan (Fintech)
+                            </p>
+                            <p class="text-sm font-semibold text-slate-800 mb-4" id="outDesc">
+                                Mesin transaksi terenkripsi ultra-cepat dengan arsitektur mikroservis.
+                            </p>
+                            
+                            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 pt-3 border-t border-black/20">
+                                <div class="flex flex-wrap gap-1" id="outTechTags">
+                                    <!-- Dynamic tech list -->
+                                </div>
+                                <a id="outLink" href="#" target="_blank" class="bg-white text-black font-extrabold text-xs px-3 py-1.5 border-2 border-black rounded shadow-brutal-sm active:translate-y-0.5 hover:bg-black hover:text-white transition-all">
+                                    Demo Link <i class="fa-solid fa-up-right-from-square ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Seeded Cards (Used for filtering showcase) -->
+                        <div class="bg-white border-4 border-black p-4 rounded shadow-brutal project-card" data-tech="React,PostgreSQL">
+                            <div class="flex justify-between items-start">
+                                <span class="bg-black text-white text-[10px] font-bold px-1.5 py-0.5 rounded">Rian Hakim</span>
+                                <span class="text-xs font-extrabold text-slate-700">⭐ 84</span>
+                            </div>
+                            <h4 class="text-lg font-black mt-2">SaaS HRIS Indonesia</h4>
+                            <p class="text-xs font-bold text-slate-500 mb-3">Enterprise System</p>
+                            <div class="flex flex-wrap gap-1 mb-4">
+                                <span class="bg-brutalCyan text-[9px] font-black px-1.5 py-0.5 border border-black rounded">React</span>
+                                <span class="bg-brutalGreen text-[9px] font-black px-1.5 py-0.5 border border-black rounded">PostgreSQL</span>
+                            </div>
+                            <button class="w-full text-center bg-brutalYellow text-xs font-bold py-1 border border-black rounded">Lihat Dokumentasi</button>
+                        </div>
+
+                        <div class="bg-white border-4 border-black p-4 rounded shadow-brutal project-card" data-tech="Python,Redis">
+                            <div class="flex justify-between items-start">
+                                <span class="bg-black text-white text-[10px] font-bold px-1.5 py-0.5 rounded">Lina Wijaya</span>
+                                <span class="text-xs font-extrabold text-slate-700">⭐ 56</span>
+                            </div>
+                            <h4 class="text-lg font-black mt-2">AI Sentiment Tracker</h4>
+                            <p class="text-xs font-bold text-slate-500 mb-3">Data Analytics</p>
+                            <div class="flex flex-wrap gap-1 mb-4">
+                                <span class="bg-brutalPurple text-[9px] font-black text-white px-1.5 py-0.5 border border-black rounded">Python</span>
+                                <span class="bg-brutalYellow text-[9px] font-black px-1.5 py-0.5 border border-black rounded">Redis</span>
+                            </div>
+                            <button class="w-full text-center bg-brutalYellow text-xs font-bold py-1 border border-black rounded">Lihat Dokumentasi</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERI APLIKASI -->
+    <section id="galeri" class="py-16 px-4 bg-brutalBg border-b-4 border-black">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="bg-brutalPurple text-white font-extrabold text-xs uppercase px-3 py-1 border-2 border-black rounded shadow-brutal-sm">Gallery</span>
+                <h2 class="text-3xl md:text-5xl font-black text-black tracking-tight mt-4">
+                    INTIP TAMPILAN DEVSTORE
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="border-4 border-black shadow-brutal bg-white p-2 cursor-pointer hover:scale-105 transition-transform" onclick="openModal('images/page1.png')">
+                    <img src="images/page1.png" alt="Galeri 1" class="w-full h-auto border-2 border-black">
+                </div>
+                <div class="border-4 border-black shadow-brutal bg-white p-2 cursor-pointer hover:scale-105 transition-transform" onclick="openModal('images/page2.png')">
+                    <img src="images/page2.png" alt="Galeri 2" class="w-full h-auto border-2 border-black">
+                </div>
+                <div class="border-4 border-black shadow-brutal bg-white p-2 cursor-pointer hover:scale-105 transition-transform" onclick="openModal('images/page3.png')">
+                    <img src="images/page3.png" alt="Galeri 3" class="w-full h-auto border-2 border-black">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/80 flex items-center justify-center p-4" onclick="closeModal()">
+        <div class="relative bg-white border-4 border-black p-2 shadow-brutal-xl max-w-4xl">
+            <img id="modalImg" src="" alt="Zoomed" class="w-full h-auto border-2 border-black">
+            <button class="absolute -top-4 -right-4 bg-red-500 text-white font-black px-4 py-2 border-2 border-black rounded" onclick="closeModal()">X</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal(src) {
+            document.getElementById('modalImg').src = src;
+            document.getElementById('imageModal').classList.remove('hidden');
+        }
+        function closeModal() {
+            document.getElementById('imageModal').classList.add('hidden');
+        }
+    </script>
+
+    <!-- VALUE PROPOSITION (TAB-BASED SWITCHER) -->
+    <section id="manfaat" class="py-16 px-4 bg-brutalDark text-white border-b-4 border-black relative">
+        <div class="max-w-7xl mx-auto">
+            <!-- Title -->
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-4">
+                <span class="bg-brutalPink text-black font-extrabold text-xs uppercase px-3 py-1 border-2 border-black rounded shadow-brutal-sm">Value Proposition</span>
+                <h2 class="text-3xl md:text-5xl font-black text-brutalYellow tracking-tight">
+                    MANFAAT UNTUK SEMUA PIHAK
+                </h2>
+                <p class="text-slate-300 font-bold text-sm md:text-base">
+                    Sistem satu pintu yang memberikan nilai tambah maksimal di setiap level operasional. Klik tab di bawah untuk melihat detail keuntungan!
+                </p>
+            </div>
+
+            <!-- Neobrutalist Persona Switcher Tabs -->
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-8">
+                <button onclick="switchPersona('developer')" id="tab-developer" class="persona-tab w-full md:w-auto bg-brutalYellow text-black font-black text-lg px-8 py-4 border-4 border-black rounded shadow-brutal hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-brutal-lg transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-laptop-code"></i> Bagi Developer
+                </button>
+                <button onclick="switchPersona('admin')" id="tab-admin" class="persona-tab w-full md:w-auto bg-white text-black font-black text-lg px-8 py-4 border-4 border-black rounded shadow-brutal hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-brutal-lg transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-user-shield"></i> Bagi Admin / Kurator
+                </button>
+                <button onclick="switchPersona('management')" id="tab-management" class="persona-tab w-full md:w-auto bg-white text-black font-black text-lg px-8 py-4 border-4 border-black rounded shadow-brutal hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-brutal-lg transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-briefcase"></i> Bagi Manajemen / Klien
+                </button>
+            </div>
+
+            <!-- Switcher Content Display Box -->
+            <div class="bg-white text-black border-4 border-black p-6 md:p-10 rounded-lg shadow-brutal-lg relative overflow-hidden">
+                <!-- Large Decorative Icon behind text -->
+                <div class="absolute -right-10 -bottom-10 text-slate-100 text-9xl font-black -rotate-12 pointer-events-none select-none">
+                    DEVSTORE
+                </div>
+
+                <!-- Developer Persona Content -->
+                <div id="content-developer" class="persona-content space-y-6">
+                    <div class="flex items-center gap-3">
+                        <span class="bg-brutalYellow text-black font-black text-xs uppercase px-2 py-1 border border-black rounded">LEVEL: CREATOR</span>
+                        <h3 class="text-2xl md:text-3xl font-black tracking-tight text-slate-950">Membangun Reputasi & Personal Brand Otentik</h3>
+                    </div>
+                    <p class="text-base text-slate-700 leading-relaxed font-semibold max-w-4xl">
+                        Ucapkan selamat tinggal pada portofolio PDF kaku yang cepat usang. Dengan DevStore, Anda memiliki satu link representasi digital yang hidup, profesional, terstruktur, dan tervalidasi langsung dari log teknis.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+                        <div class="bg-slate-50 border-2 border-black p-4 rounded shadow-brutal-sm flex gap-3">
+                            <span class="text-2xl">💼</span>
+                            <div>
+                                <h4 class="font-extrabold text-base">Standar Industri Instan</h4>
+                                <p class="text-xs font-semibold text-slate-600">Dokumentasi tech-stack rapi yang disukai oleh para HR Technical Assessor.</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 border-2 border-black p-4 rounded shadow-brutal-sm flex gap-3">
+                            <span class="text-2xl">🔗</span>
+                            <div>
+                                <h4 class="font-extrabold text-base">Satu Link Untuk Semua</h4>
+                                <p class="text-xs font-semibold text-slate-600">Mudah dibagikan di profil LinkedIn, resume, atau email penawaran kerja.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admin Persona Content -->
+                <div id="content-admin" class="persona-content hidden space-y-6">
+                    <div class="flex items-center gap-3">
+                        <span class="bg-brutalCyan text-black font-black text-xs uppercase px-2 py-1 border border-black rounded">LEVEL: MONITOR & VERIFY</span>
+                        <h3 class="text-2xl md:text-3xl font-black tracking-tight text-slate-950">Efisien, Cepat, Tanpa Beban Manual</h3>
+                    </div>
+                    <p class="text-base text-slate-700 leading-relaxed font-semibold max-w-4xl">
+                        Menganalisis, mengulas, dan mengumpulkan data master portofolio secara otomatis. Menghemat waktu peninjauan hingga puluhan jam berkat skema standardisasi input terpusat.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+                        <div class="bg-slate-50 border-2 border-black p-4 rounded shadow-brutal-sm flex gap-3">
+                            <span class="text-2xl">⏱️</span>
+                            <div>
+                                <h4 class="font-extrabold text-base">Kurasi Otomatis</h4>
+                                <p class="text-xs font-semibold text-slate-600">Cukup verifikasi payload JSON tanpa perlu memeriksa baris kode dari nol.</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 border-2 border-black p-4 rounded shadow-brutal-sm flex gap-3">
+                            <span class="text-2xl">📂</span>
+                            <div>
+                                <h4 class="font-extrabold text-base">Ekosistem Data Master</h4>
+                                <p class="text-xs font-semibold text-slate-600">Pengarsipan metadata framework, bahasa pemrograman, dan database tersistem.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Management Persona Content -->
+                <div id="content-management" class="persona-content hidden space-y-6">
+                    <div class="flex items-center gap-3">
+                        <span class="bg-brutalGreen text-black font-black text-xs uppercase px-2 py-1 border border-black rounded">LEVEL: DECISION MAKER</span>
+                        <h3 class="text-2xl md:text-3xl font-black tracking-tight text-slate-950">Pemetaan Kapabilitas untuk Kecepatan Keputusan</h3>
+                    </div>
+                    <p class="text-base text-slate-700 leading-relaxed font-semibold max-w-4xl">
+                        Dapatkan kemudahan dalam memetakan kapabilitas teknis developer (berdasarkan kategori database, framework, atau industri) serta mempercepat proses pengambilan keputusan dalam pemilihan mitra atau tenaga profesional.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+                        <div class="bg-slate-50 border-2 border-black p-4 rounded shadow-brutal-sm flex gap-3">
+                            <span class="text-2xl">🎯</span>
+                            <div>
+                                <h4 class="font-extrabold text-base">Filter Keahlian Tepat Guna</h4>
+                                <p class="text-xs font-semibold text-slate-600">Temukan developer ahli spesifik framework hanya dengan beberapa klik filter.</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 border-2 border-black p-4 rounded shadow-brutal-sm flex gap-3">
+                            <span class="text-2xl">⚡</span>
+                            <div>
+                                <h4 class="font-extrabold text-base">Keputusan Bisnis Lebih Cepat</h4>
+                                <p class="text-xs font-semibold text-slate-600">Mengurangi risiko salah memilih mitra kerja dengan verifikasi status produksi nyata.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TOAST NOTIFICATION UTILITY CONTAINER (NEOBRUTALISM STYLE) -->
+    <div id="brutalToast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-brutalPink text-black font-black border-4 border-black p-4 rounded shadow-brutal-lg flex items-center gap-3 max-w-sm">
+            <span class="bg-black text-white p-1 rounded-full w-7 h-7 flex items-center justify-center">!</span>
+            <div class="text-xs md:text-sm" id="toastText">Pesan default di sini.</div>
+        </div>
+    </div>
+
+    <!-- NEWSLETTER & CALL TO ACTION -->
+    <section class="py-16 px-4 bg-brutalYellow border-b-4 border-black text-black">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <div class="inline-block bg-black text-white font-extrabold text-xs tracking-wider px-3 py-1.5 uppercase border-2 border-black rounded rotate-[-2deg]">
+                READY TO SHOWCASE YOUR CODE?
+            </div>
+            
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">
+                GABUNG DAFTAR PRIORITAS SEKARANG!
+            </h2>
+            
+            <p class="text-base md:text-lg font-bold max-w-2xl mx-auto text-slate-800">
+                Dapatkan akses langsung untuk mempublikasikan database portofolio JSON Anda saat platform kami rilis secara publik.
+            </p>
+
+            <!-- Newsletter Signup Form -->
+            <form onsubmit="handleSignup(event)" class="max-w-md mx-auto flex flex-col sm:flex-row gap-2 pt-4">
+                <input type="email" id="signupEmail" required placeholder="Masukkan email developer Anda..." class="flex-grow p-4 border-4 border-black font-bold placeholder-slate-500 rounded focus:outline-none focus:ring-4 focus:ring-brutalPink" />
+                <button type="submit" class="bg-black text-white hover:bg-brutalPink hover:text-black font-black uppercase text-sm px-6 py-4 border-4 border-black rounded shadow-brutal hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all whitespace-nowrap">
+                    Kirim Kontak <i class="fa-solid fa-paper-plane ml-2"></i>
+                </button>
+            </form>
+            
+            <p class="text-xs font-bold text-slate-700">
+                *Kami menghormati privasi Anda. Tidak ada spam, 100% informasi integrasi developer bermanfaat.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-white py-12 px-4 border-t-2 border-black">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
+            <!-- Footer Branding (col-span-5) -->
+            <div class="md:col-span-5 space-y-4">
+                <div class="bg-brutalYellow text-black p-2 px-4 border-2 border-black font-extrabold text-xl tracking-tight inline-block shadow-brutal">
+                    DEVSTORE_
+                </div>
+                <p class="text-xs md:text-sm font-semibold text-slate-400 max-w-sm leading-relaxed">
+                    Direktori terintegrasi untuk membantu developer mengelola portofolio berbasis JSON, otomatisasi kurasi data master, dan mempercepat rekrutmen profesional.
+                </p>
+                <div class="flex gap-3 pt-2">
+                    <a href="#" class="w-10 h-10 bg-white hover:bg-brutalYellow text-black border-2 border-black rounded shadow-brutal-sm flex items-center justify-center transition-all">
+                        <i class="fa-brands fa-github text-lg"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-white hover:bg-brutalCyan text-black border-2 border-black rounded shadow-brutal-sm flex items-center justify-center transition-all">
+                        <i class="fa-brands fa-linkedin-in text-lg"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-white hover:bg-brutalPink text-black border-2 border-black rounded shadow-brutal-sm flex items-center justify-center transition-all">
+                        <i class="fa-brands fa-twitter text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Quick Links (col-span-3) -->
+            <div class="md:col-span-3 space-y-3">
+                <h4 class="font-black text-brutalYellow uppercase tracking-wider text-sm">Navigasi Utama</h4>
+                <ul class="space-y-2 text-xs md:text-sm font-bold text-slate-300">
+                    <li><a href="#masalah" class="hover:text-brutalOrange transition-colors">Masalah & Realita</a></li>
+                    <li><a href="#tujuan" class="hover:text-brutalOrange transition-colors">Tujuan Aplikasi</a></li>
+                    <li><a href="#demo" class="hover:text-brutalOrange transition-colors">Demo JSON Sandbox</a></li>
+                    <li><a href="#manfaat" class="hover:text-brutalOrange transition-colors">Manfaat Komponen</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Tech Categories Info (col-span-4) -->
+            <div class="md:col-span-4 space-y-3">
+                <h4 class="font-black text-brutalPink uppercase tracking-wider text-sm">Teknologi Terdukung</h4>
+                <p class="text-xs text-slate-400 font-bold leading-relaxed">
+                    Kami mendukung klasifikasi otomatis untuk framework frontend (React, Vue), backend (Go, Python, Laravel), database (Postgre, MySQL, MongoDB), serta deployment metadata.
+                </p>
+                <div class="bg-slate-900 p-2.5 border border-slate-700 rounded text-[10px] text-slate-400 font-mono">
+                    System Version: stable-1.3.0_release
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto mt-10 pt-6 border-t border-slate-800 text-center text-xs text-slate-500 font-semibold flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                &copy; 2026 DevStore Project. Desain Gaya Neobrutalism. Hak Cipta Dilindungi.
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="hover:underline">Kebijakan Privasi</a>
+                <span>&bull;</span>
+                <a href="#" class="hover:underline">Syarat Ketentuan</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // --- 1. HERO MINI-SANDBOX INTERACTIVITY ---
+        const heroJsonInput = document.getElementById('heroJsonInput');
+        const previewDevName = document.getElementById('previewDevName');
+        const previewStatus = document.getElementById('previewStatus');
+        const previewTitle = document.getElementById('previewTitle');
+        const previewCategory = document.getElementById('previewCategory');
+        const previewTechStack = document.getElementById('previewTechStack');
+        const heroRenderedCard = document.getElementById('heroRenderedCard');
+
+        // Render function for Hero card
+        function updateHeroCard() {
+            try {
+                const data = JSON.parse(heroJsonInput.value);
+                
+                // Update elements securely
+                previewDevName.innerText = data.developer || "Developer";
+                previewStatus.innerText = data.status ? `🚀 ${data.status}` : "Status";
+                previewTitle.innerText = data.projectTitle || "Untitled Project";
+                previewCategory.innerText = `Category: ${data.category || "General"}`;
+                
+                // Tech Stack Tags Render
+                previewTechStack.innerHTML = '';
+                if (Array.isArray(data.techStack)) {
+                    data.techStack.forEach(tech => {
+                        const tag = document.createElement('span');
+                        tag.className = "bg-white text-black text-[10px] font-black px-2 py-0.5 border-2 border-black rounded";
+                        tag.innerText = tech;
+                        previewTechStack.appendChild(tag);
+                    });
+                }
+                
+                // Trigger a tiny satisfying brutal animation bounce on updates
+                heroRenderedCard.classList.remove('rotate-1', '-rotate-1');
+                heroRenderedCard.classList.add(Math.random() > 0.5 ? 'rotate-1' : '-rotate-1');
+            } catch (e) {
+                // If invalid JSON, display visually safe placeholders without breaking execution
+                previewTitle.innerText = "Error: Invalid JSON Syntax";
+                previewCategory.innerText = "Silakan perbaiki format penulisan JSON Anda.";
+            }
+        }
+
+        // Listen for input changes in hero editor
+        heroJsonInput.addEventListener('input', updateHeroCard);
+        
+        // Run once at initial load
+        updateHeroCard();
+
+
+        // --- 2. MAIN WORKSPACE INTERACTIVITY: JSON EDITOR & FILTER SIMULATOR ---
+        const mainJsonInput = document.getElementById('mainJsonInput');
+        const jsonStatusBadge = document.getElementById('jsonStatusBadge');
+        
+        // Output elements
+        const outDevName = document.getElementById('outDevName');
+        const outStatus = document.getElementById('outStatus');
+        const outStars = document.getElementById('outStars');
+        const outTitle = document.getElementById('outTitle');
+        const outCategory = document.getElementById('outCategory');
+        const outDesc = document.getElementById('outDesc');
+        const outTechTags = document.getElementById('outTechTags');
+        const outLink = document.getElementById('outLink');
+        const customProjectWrapper = document.getElementById('customProjectWrapper');
+
+        // Template Presets for Sandbox
+        const templates = {
+            fintech: {
+                developer: "Yuki Harsono",
+                projectTitle: "Smart FinPay Core Engine",
+                category: "Keuangan (Fintech)",
+                techStack: ["Golang", "PostgreSQL", "Kafka", "Redis"],
+                status: "Production Ready",
+                stars: 128,
+                description: "Mesin transaksi terenkripsi ultra-cepat dengan arsitektur mikroservis.",
+                demoUrl: "https://pay.smartfin.co"
+            },
+            iot: {
+                developer: "Budi Santoso",
+                projectTitle: "AquaSense IoT Dashboard",
+                category: "Agrikultur Pintar",
+                techStack: ["React", "Python", "MQTT", "PostgreSQL"],
+                status: "Beta Testing",
+                stars: 45,
+                description: "Pemantau kualitas air tambak udang terintegrasi mikrokontroler real-time.",
+                demoUrl: "https://aquasense.io"
+            },
+            game: {
+                developer: "Amara Putri",
+                projectTitle: "PixelQuest Retro Web",
+                category: "Digital Game",
+                techStack: ["React", "CSS3", "Redis"],
+                status: "Live Demo Available",
+                stars: 92,
+                description: "Game arcade roguelike klasik yang dimainkan langsung di web browser Anda.",
+                demoUrl: "https://quest.pixel.id"
+            }
+        };
+
+        // Function to load presets
+        function loadTemplate(key) {
+            if (templates[key]) {
+                mainJsonInput.value = JSON.stringify(templates[key], null, 2);
+                updateMainOutput();
+                showToast(`Memuat template: ${key.toUpperCase()}`);
+            }
+        }
+
+        // Parse and render the interactive workspace outputs
+        function updateMainOutput() {
+            try {
+                const data = JSON.parse(mainJsonInput.value);
+                
+                // Mark JSON as valid
+                jsonStatusBadge.innerHTML = `<i class="fa-solid fa-circle-check mr-1"></i> VALID JSON`;
+                jsonStatusBadge.className = "bg-brutalGreen text-black text-xs font-black px-2 py-1 rounded border border-black";
+                
+                // Render fields securely
+                outDevName.innerText = data.developer || "Nama Developer";
+                outStatus.innerText = data.status ? `🚀 ${data.status}` : "Status Proyek";
+                outStars.innerText = `⭐ ${data.stars || 0}`;
+                outTitle.innerText = data.projectTitle || "Nama Proyek Terintegrasi";
+                outCategory.innerText = `Kategori: ${data.category || "Lain-lain"}`;
+                outDesc.innerText = data.description || "Deskripsi ringkas mengenai solusi proyek.";
+                
+                // Tech tags
+                outTechTags.innerHTML = '';
+                if (Array.isArray(data.techStack)) {
+                    data.techStack.forEach(tech => {
+                        const tag = document.createElement('span');
+                        tag.className = "bg-white text-black text-[10px] font-black px-2.5 py-1 border-2 border-black rounded";
+                        tag.innerText = tech;
+                        outTechTags.appendChild(tag);
+                    });
+                }
+                
+                // Link
+                outLink.href = data.demoUrl || "#";
+
+                // Set dynamic attribute for search filtering
+                const techString = Array.isArray(data.techStack) ? data.techStack.join(',') : '';
+                customProjectWrapper.setAttribute('data-tech', techString);
+
+            } catch (err) {
+                // Mark JSON as invalid
+                jsonStatusBadge.innerHTML = `<i class="fa-solid fa-triangle-exclamation mr-1"></i> ERROR SYNTAX`;
+                jsonStatusBadge.className = "bg-brutalPink text-black text-xs font-black px-2 py-1 rounded border border-black";
+            }
+        }
+
+        // Listen for input changes in main workspace editor
+        mainJsonInput.addEventListener('input', updateMainOutput);
+        
+        // Initial call
+        updateMainOutput();
+
+
+        // --- 3. FILTERING MECHANISM ---
+        function filterProjects(techFilter) {
+            // Update UI buttons active state
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active-filter', 'bg-black', 'text-white');
+                btn.classList.add('bg-white', 'text-black');
+            });
+            
+            // Highlight the clicked filter button
+            event.currentTarget.classList.add('active-filter', 'bg-black', 'text-white');
+            event.currentTarget.classList.remove('bg-white', 'text-black');
+
+            // Find all listable components including the custom wrapper
+            const elements = [customProjectWrapper, ...document.querySelectorAll('.project-card')];
+            
+            elements.forEach(el => {
+                if (techFilter === 'all') {
+                    el.classList.remove('hidden');
+                } else {
+                    const techAttr = el.getAttribute('data-tech') || '';
+                    const hasTech = techAttr.toLowerCase().includes(techFilter.toLowerCase());
+                    if (hasTech) {
+                        el.classList.remove('hidden');
+                    } else {
+                        el.classList.add('hidden');
+                    }
+                }
+            });
+            
+            showToast(`Menyaring direktori berdasarkan: ${techFilter === 'all' ? 'Semua Proyek' : techFilter}`);
+        }
+
+
+        // --- 4. PERSONA SWITCHER TABS ---
+        function switchPersona(personaId) {
+            // Hide all contents
+            const contents = document.querySelectorAll('.persona-content');
+            contents.forEach(el => el.classList.add('hidden'));
+
+            // Reset tab button styling back to default
+            const tabs = document.querySelectorAll('.persona-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-brutalYellow', 'bg-brutalCyan', 'bg-brutalGreen');
+                tab.classList.add('bg-white');
+            });
+
+            // Show current content & style selected tab beautifully
+            const targetContent = document.getElementById(`content-${personaId}`);
+            if (targetContent) {
+                targetContent.classList.remove('hidden');
+            }
+
+            const targetTab = document.getElementById(`tab-${personaId}`);
+            if (targetTab) {
+                targetTab.classList.remove('bg-white');
+                if (personaId === 'developer') {
+                    targetTab.classList.add('bg-brutalYellow');
+                } else if (personaId === 'admin') {
+                    targetTab.classList.add('bg-brutalCyan');
+                } else if (personaId === 'management') {
+                    targetTab.classList.add('bg-brutalGreen');
+                }
+            }
+
+            showToast(`Mengalihkan fokus manfaat ke: ${personaId.toUpperCase()}`);
+        }
+
+
+        // --- 5. TOAST FEEDBACK & NEWSLETTER SUBMISSION ---
+        let toastTimeout;
+        function showToast(message) {
+            const toast = document.getElementById('brutalToast');
+            const toastText = document.getElementById('toastText');
+            
+            toastText.innerText = message;
+            
+            // Reset position animations
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3000);
+        }
+
+        // Handle Form Submit (Without browser alerts)
+        function handleSignup(event) {
+            event.preventDefault();
+            const emailInput = document.getElementById('signupEmail');
+            if (emailInput.value) {
+                showToast(`🎉 Sukses! ${emailInput.value} berhasil didaftarkan.`);
+                emailInput.value = '';
+            }
+        }
+    </script>
+</body>
+</html>
