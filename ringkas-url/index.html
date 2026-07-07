@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RingkasURL - Dokumentasi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: #FAFAF8;
+  color: #1A1A1A;
+  line-height: 1.6;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* neobrutalism utils */
+.brutal-card {
+  background: #FFF;
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0 #000;
+  padding: 24px;
+  transition: box-shadow .15s, transform .15s;
+}
+.brutal-card:hover {
+  box-shadow: 10px 10px 0 #000;
+  transform: translate(-2px, -2px);
+}
+.brutal-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  cursor: pointer;
+  transition: box-shadow .12s, transform .12s;
+  background: #FFF;
+  color: #1A1A1A;
+}
+.brutal-btn:hover {
+  box-shadow: 6px 6px 0 #000;
+  transform: translate(-2px, -2px);
+}
+.brutal-btn-primary {
+  background: #FF6B35;
+  color: #FFF;
+}
+.brutal-btn-outline {
+  background: transparent;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 80px 0;
+  border-bottom: 3px solid #000;
+}
+.section:last-child { border-bottom: none; }
+
+.section-label {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 4px 14px;
+  border: 2px solid #000;
+  background: #FFD166;
+  margin-bottom: 16px;
+}
+.section-title {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.section-sub {
+  font-size: 18px;
+  color: #555;
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 24px; }
+.grid-6 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+
+@media (max-width: 960px) {
+  .grid-2, .grid-3, .grid-4, .grid-6 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .grid-2, .grid-3, .grid-4, .grid-6 { grid-template-columns: 1fr; }
+  .section-title { font-size: 28px; }
+  .section { padding: 48px 0; }
+}
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #FFF;
+  border-bottom: 3px solid #000;
+  padding: 12px 0;
+}
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 22px;
+  font-weight: 900;
+}
+.logo span { color: #FF6B35; }
+.nav-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border: 2px solid transparent;
+  transition: border-color .15s;
+}
+.nav-links a:hover { border-color: #000; }
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 2px solid #000;
+  font-size: 24px;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #FFF;
+    border-bottom: 3px solid #000;
+    flex-direction: column;
+    padding: 16px 24px;
+  }
+  .nav-links.open { display: flex; }
+}
+
+/* HERO */
+#hero {
+  padding: 100px 0 80px;
+  background: #FFF;
+  border-bottom: 3px solid #000;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.hero-tag {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 4px 14px;
+  border: 2px solid #000;
+  background: #004E98;
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+.hero-title {
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.hero-title span { color: #FF6B35; }
+.hero-desc {
+  font-size: 18px;
+  color: #555;
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+.hero-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.hero-img {
+  border: 3px solid #000;
+  box-shadow: 10px 10px 0 #000;
+  background: #E8E8E3;
+  aspect-ratio: 16/10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-title { font-size: 36px; }
+  #hero { padding: 60px 0 40px; }
+}
+
+/* KEUNGGULAN */
+.keunggulan-icon {
+  font-size: 32px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  background: #FFD166;
+  margin-bottom: 16px;
+}
+.keunggulan-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 8px; }
+.keunggulan-card p { font-size: 15px; color: #555; }
+
+/* FITUR */
+.fitur-card {
+  background: #FFF;
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0 #000;
+  padding: 24px;
+  transition: box-shadow .15s, transform .15s;
+}
+.fitur-card:hover {
+  box-shadow: 10px 10px 0 #000;
+  transform: translate(-2px, -2px);
+}
+.fitur-icon {
+  font-size: 28px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  background: #FF6B35;
+  color: #FFF;
+  margin-bottom: 16px;
+}
+.fitur-card h3 { font-size: 18px; font-weight: 800; margin-bottom: 8px; }
+.fitur-card p { font-size: 14px; color: #555; }
+
+/* SCREENSHOT GALLERY */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+.gallery-item {
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0 #000;
+  background: #FFF;
+  overflow: hidden;
+}
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  border-bottom: 2px solid #000;
+}
+.gallery-item .gallery-caption {
+  padding: 12px 16px;
+}
+.gallery-item .gallery-caption h4 { font-size: 15px; font-weight: 800; }
+.gallery-item .gallery-caption p { font-size: 13px; color: #666; }
+@media (max-width: 860px) {
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 540px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+}
+
+/* FLOW */
+.flow-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+.flow-step {
+  display: inline-block;
+  padding: 12px 32px;
+  border: 3px solid #000;
+  background: #FFF;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 4px 4px 0 #000;
+}
+.flow-arrow {
+  font-size: 24px;
+  font-weight: 900;
+  padding: 4px 0;
+  color: #FF6B35;
+}
+
+/* TABLE */
+.brutal-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid #000;
+}
+.brutal-table th, .brutal-table td {
+  border: 2px solid #000;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14px;
+}
+.brutal-table th {
+  background: #004E98;
+  color: #FFF;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: .5px;
+}
+.brutal-table tr:nth-child(even) { background: #F4F4F0; }
+
+/* TECH */
+.tech-card {
+  background: #FFF;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  padding: 20px;
+  text-align: center;
+}
+.tech-card .tech-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+.tech-card h4 { font-size: 16px; font-weight: 800; }
+.tech-card p { font-size: 13px; color: #666; }
+
+/* ARSITEKTUR */
+.arch-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  font-weight: 700;
+}
+.arch-node {
+  padding: 14px 40px;
+  border: 3px solid #000;
+  background: #FFF;
+  box-shadow: 4px 4px 0 #000;
+  font-size: 16px;
+}
+.arch-arrow { font-size: 22px; padding: 4px 0; }
+
+/* FAQ */
+.faq-item {
+  border: 3px solid #000;
+  margin-bottom: 12px;
+  background: #FFF;
+  box-shadow: 4px 4px 0 #000;
+}
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+.faq-question .faq-toggle {
+  font-size: 20px;
+  transition: transform .2s;
+}
+.faq-item.open .faq-toggle { transform: rotate(45deg); }
+.faq-answer {
+  padding: 0 20px 16px;
+  font-size: 15px;
+  color: #555;
+  display: none;
+}
+.faq-item.open .faq-answer { display: block; }
+
+/* KONTAK */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  background: #FFF;
+  transition: box-shadow .15s, transform .15s;
+}
+.contact-card:hover {
+  box-shadow: 8px 8px 0 #000;
+  transform: translate(-2px, -2px);
+}
+.contact-card .ct-icon {
+  font-size: 28px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  flex-shrink: 0;
+}
+.contact-card .ct-label { font-size: 12px; font-weight: 600; text-transform: uppercase; color: #888; letter-spacing: .5px; }
+.contact-card .ct-value { font-size: 16px; font-weight: 700; word-break: break-all; }
+@media (max-width: 720px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+/* FOOTER */
+footer {
+  background: #1A1A1A;
+  color: #FFF;
+  padding: 32px 0;
+  border-top: 3px solid #000;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+footer .footer-left { font-size: 14px; }
+footer .footer-right { font-size: 13px; opacity: .7; }
+
+/* STUDI KASUS */
+.case-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.case-card {
+  padding: 24px;
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0 #000;
+  background: #FFF;
+}
+.case-card.case-before { background: #FFE8E0; }
+.case-card.case-after { background: #E0F0E8; }
+.case-card h3 { font-size: 18px; font-weight: 800; margin-bottom: 12px; }
+.case-card ul { list-style: none; }
+.case-card ul li {
+  padding: 6px 0;
+  font-size: 14px;
+  padding-left: 24px;
+  position: relative;
+}
+.case-card ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #000;
+}
+.case-before ul li::before { background: #FF6B35; }
+.case-after ul li::before { background: #2ECC71; }
+@media (max-width: 640px) {
+  .case-grid { grid-template-columns: 1fr; }
+}
+
+/* KEAMANAN / PERFORMA tags */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.tag-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 2px solid #000;
+  background: #FFF;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 3px 3px 0 #000;
+}
+.tag-item .tag-icon { font-size: 18px; }
+
+/* MODUL */
+.modul-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 860px) {
+  .modul-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 540px) {
+  .modul-grid { grid-template-columns: 1fr; }
+}
+
+/* misc */
+.text-center { text-align: center; }
+.mt-24 { margin-top: 24px; }
+.mb-24 { margin-bottom: 24px; }
+.mb-40 { margin-bottom: 40px; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.max-w-600 { max-width: 600px; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <div class="logo">Ringkas<span>URL</span></div>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="#tentang">Tentang</a>
+      <a href="#keunggulan">Keunggulan</a>
+      <a href="#fitur">Fitur</a>
+      <a href="#screenshot">Screenshot</a>
+      <a href="#teknologi">Teknologi</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+  </div>
+</nav>
+
+<!-- 1. HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-tag">🚀 Aplikasi Link Shortener</div>
+        <h1 class="hero-title">Sederhanakan <span>Tautan</span> Anda</h1>
+        <p class="hero-desc">Platform pemendek tautan modern yang cepat, aman, dan mudah digunakan. Pantau performa tautan Anda secara real-time.</p>
+        <div class="hero-btns">
+          <a href="#" class="brutal-btn brutal-btn-primary">🎯 Demo</a>
+          <a href="#fitur" class="brutal-btn">📖 Dokumentasi</a>
+          <a href="#kontak" class="brutal-btn brutal-btn-outline">✉️ Hubungi</a>
+          <a href="https://github.com/L9kyuu-AppWeb" target="_blank" class="brutal-btn brutal-btn-outline">🐙 GitHub</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="images/home.png" alt="RingkasURL Home Preview">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. TENTANG -->
+<section class="section" id="tentang">
+  <div class="container">
+    <span class="section-label">Tentang</span>
+    <h2 class="section-title">Mengapa RingkasURL?</h2>
+    <p class="section-sub">Solusi cerdas untuk mengelola dan membagikan tautan Anda dengan lebih efisien.</p>
+    <div class="grid-2">
+      <div class="brutal-card">
+        <h3 style="font-size:20px;font-weight:800;margin-bottom:12px;">📌 Latar Belakang</h3>
+        <p style="font-size:15px;color:#555;">Tautan panjang dan berantakan sulit dibagikan, tidak profesional, dan rentan salah ketika disalin. RingkasURL hadir sebagai solusi pemendek tautan yang menawarkan kemudahan, keamanan, dan analitik lengkap.</p>
+      </div>
+      <div class="brutal-card">
+        <h3 style="font-size:20px;font-weight:800;margin-bottom:12px;">🎯 Tujuan</h3>
+        <p style="font-size:15px;color:#555;">Menyediakan platform pemendek tautan yang cepat, aman, dan kaya fitur — membantu individu maupun bisnis mengoptimalkan strategi tautan mereka dengan data yang akurat.</p>
+      </div>
+      <div class="brutal-card">
+        <h3 style="font-size:20px;font-weight:800;margin-bottom:12px;">👥 Target Pengguna</h3>
+        <p style="font-size:15px;color:#555;">Marketer, content creator, developer, pebisnis online, dan siapa saja yang perlu membagikan tautan secara profesional dan terukur.</p>
+      </div>
+      <div class="brutal-card">
+        <h3 style="font-size:20px;font-weight:800;margin-bottom:12px;">✅ Manfaat Utama</h3>
+        <p style="font-size:15px;color:#555;">Tautan lebih pendek dan rapi, analitik klik real-time, pengelolaan tautan dalam satu dashboard, serta fitur keamanan yang melindungi pengguna Anda.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. KEUNGGULAN -->
+<section class="section" id="keunggulan">
+  <div class="container">
+    <span class="section-label">Keunggulan</span>
+    <h2 class="section-title">Mengapa Memilih RingkasURL?</h2>
+    <p class="section-sub">Kami menghadirkan pengalaman pemendek tautan yang berbeda.</p>
+    <div class="grid-3">
+      <div class="keunggulan-card brutal-card">
+        <div class="keunggulan-icon">⚡</div>
+        <h3>Cepat</h3>
+        <p>Proses pemendekan tautan dalam hitungan detik. Redirect super cepat tanpa delay.</p>
+      </div>
+      <div class="keunggulan-card brutal-card">
+        <div class="keunggulan-icon">🔒</div>
+        <h3>Aman</h3>
+        <p>Dilindungi enkripsi, validasi tautan otomatis, dan perlindungan dari tautan berbahaya.</p>
+      </div>
+      <div class="keunggulan-card brutal-card">
+        <div class="keunggulan-icon">📱</div>
+        <h3>Responsive</h3>
+        <p>Tampilan sempurna di semua perangkat — desktop, tablet, maupun smartphone.</p>
+      </div>
+      <div class="keunggulan-card brutal-card">
+        <div class="keunggulan-icon">👥</div>
+        <h3>Multi User</h3>
+        <p>Dukungan banyak pengguna dengan manajemen role dan hak akses masing-masing.</p>
+      </div>
+      <div class="keunggulan-card brutal-card">
+        <div class="keunggulan-icon">👍</div>
+        <h3>Mudah Digunakan</h3>
+        <p>Antarmuka intuitif tanpa kurva belajar. Siapa pun bisa langsung menggunakannya.</p>
+      </div>
+      <div class="keunggulan-card brutal-card">
+        <div class="keunggulan-icon">🎨</div>
+        <h3>Modern UI</h3>
+        <p>Desain neobrutalism yang modern, clean, dan profesional — mencerminkan kualitas produk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. FITUR UTAMA -->
+<section class="section" id="fitur">
+  <div class="container">
+    <span class="section-label">Fitur Utama</span>
+    <h2 class="section-title">Fitur Lengkap untuk Kebutuhan Anda</h2>
+    <p class="section-sub">Setiap fitur dirancang untuk memberi manfaat nyata bagi pengguna.</p>
+    <div class="grid-3">
+      <div class="fitur-card">
+        <div class="fitur-icon">🔗</div>
+        <h3>Pemendek Tautan Instan</h3>
+        <p>Perpendek tautan panjang hanya dalam satu klik. Dapatkan tautan pendek yang rapi dan mudah dibagikan.</p>
+      </div>
+      <div class="fitur-card">
+        <div class="fitur-icon">📊</div>
+        <h3>Analitik Real-time</h3>
+        <p>Pantau jumlah klik, geolokasi, referrer, dan tren pengunjung secara real-time untuk mengukur performa.</p>
+      </div>
+      <div class="fitur-card">
+        <div class="fitur-icon">🏷️</div>
+        <h3>Kustom Tautan</h3>
+        <p>Buat tautan pendek dengan kata kunci kustom sesuai merek atau kampanye Anda untuk identitas yang konsisten.</p>
+      </div>
+      <div class="fitur-card">
+        <div class="fitur-icon">🛡️</div>
+        <h3>Keamanan Tautan</h3>
+        <p>Validasi otomatis mendeteksi tautan berbahaya. Lindungi audiens Anda dari phishing dan malware.</p>
+      </div>
+      <div class="fitur-card">
+        <div class="fitur-icon">👨‍👩‍👧‍👦</div>
+        <h3>Manajemen Tim</h3>
+        <p>Kelola tautan bersama tim. Atur hak akses per role — Admin, Editor, Viewer — untuk kolaborasi aman.</p>
+      </div>
+      <div class="fitur-card">
+        <div class="fitur-icon">📋</div>
+        <h3>Riwayat & Laporan</h3>
+        <p>Akses riwayat lengkap semua tautan yang dibuat. Ekspor laporan dalam format CSV untuk analisis lebih lanjut.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. SCREENSHOT -->
+<section class="section" id="screenshot">
+  <div class="container">
+    <span class="section-label">Screenshot</span>
+    <h2 class="section-title">Galeri Aplikasi</h2>
+    <p class="section-sub">Tampilan antarmuka RingkasURL di setiap bagian utama.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/login.png" alt="Login">
+        <div class="gallery-caption"><h4>🔐 Halaman Login</h4><p>Masuk dengan aman ke akun Anda</p></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/home.png" alt="Beranda">
+        <div class="gallery-caption"><h4>🏠 Halaman Beranda</h4><p>Tampilan utama aplikasi yang informatif</p></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/dashboard.png" alt="Dashboard">
+        <div class="gallery-caption"><h4>📊 Dashboard</h4><p>Ringkasan performa tautan Anda</p></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/master_data.png" alt="Master Data">
+        <div class="gallery-caption"><h4>🗂️ Master Data</h4><p>Kelola data utama aplikasi</p></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/laporan.png" alt="Laporan">
+        <div class="gallery-caption"><h4>📈 Laporan</h4><p>Analitik dan statistik detail</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. ALUR PENGGUNAAN -->
+<section class="section" id="alur">
+  <div class="container text-center">
+    <span class="section-label">Alur Penggunaan</span>
+    <h2 class="section-title">Bagaimana RingkasURL Bekerja</h2>
+    <p class="section-sub mx-auto" style="max-width:500px;">Langkah sederhana untuk mulai memperpendek tautan Anda.</p>
+    <div class="flow-diagram">
+      <div class="flow-step">🔐 Login</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">📊 Dashboard</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">🔗 Buat Tautan Pendek</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">✏️ Input URL & Kustomisasi</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">✅ Validasi & Simpan</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step">📈 Pantau Hasil & Analitik</div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. ROLE PENGGUNA -->
+<section class="section" id="role">
+  <div class="container">
+    <span class="section-label">Role Pengguna</span>
+    <h2 class="section-title">Hak Akses Setiap Pengguna</h2>
+    <p class="section-sub">Sistem multi-level dengan kontrol akses granular.</p>
+    <table class="brutal-table">
+      <thead><tr><th>Role</th><th>Hak Akses</th><th>Deskripsi</th></tr></thead>
+      <tbody>
+        <tr><td><strong>🛡️ Admin</strong></td><td>Full akses</td><td>Mengelola seluruh sistem, pengguna, pengaturan, dan data</td></tr>
+        <tr><td><strong>✏️ Editor</strong></td><td>Tambah, edit, hapus tautan</td><td>Membuat dan mengelola tautan serta melihat analitik</td></tr>
+        <tr><td><strong>👀 Viewer</strong></td><td>Lihat & export laporan</td><td>Melihat data dan laporan tanpa bisa mengubah data</td></tr>
+        <tr><td><strong>👤 User</strong></td><td>Buat & kelola tautan sendiri</td><td>Menggunakan fitur pemendekan tautan secara mandiri</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 8. MODUL SISTEM -->
+<section class="section" id="modul">
+  <div class="container">
+    <span class="section-label">Modul Sistem</span>
+    <h2 class="section-title">Modul Lengkap untuk Kebutuhan Operasional</h2>
+    <p class="section-sub">Setiap modul dirancang untuk mendukung alur kerja yang efisien.</p>
+    <div class="modul-grid">
+      <div class="brutal-card">
+        <div style="font-size:32px;margin-bottom:8px;">🗂️</div>
+        <h3 style="font-size:18px;font-weight:800;margin-bottom:8px;">Master Data</h3>
+        <p style="font-size:14px;color:#555;">Mengelola data kategori, pengguna, dan referensi lainnya untuk kebutuhan sistem.</p>
+      </div>
+      <div class="brutal-card">
+        <div style="font-size:32px;margin-bottom:8px;">🔄</div>
+        <h3 style="font-size:18px;font-weight:800;margin-bottom:8px;">Transaksi</h3>
+        <p style="font-size:14px;color:#555;">Memproses pemendekan tautan, validasi URL, dan pencatatan riwayat aktivitas.</p>
+      </div>
+      <div class="brutal-card">
+        <div style="font-size:32px;margin-bottom:8px;">📊</div>
+        <h3 style="font-size:18px;font-weight:800;margin-bottom:8px;">Monitoring</h3>
+        <p style="font-size:14px;color:#555;">Memantau performa tautan, jumlah klik, dan aktivitas pengguna secara real-time.</p>
+      </div>
+      <div class="brutal-card">
+        <div style="font-size:32px;margin-bottom:8px;">📈</div>
+        <h3 style="font-size:18px;font-weight:800;margin-bottom:8px;">Laporan</h3>
+        <p style="font-size:14px;color:#555;">Menyajikan data analitik dalam bentuk grafik, tabel, dan laporan yang dapat diekspor.</p>
+      </div>
+      <div class="brutal-card">
+        <div style="font-size:32px;margin-bottom:8px;">⚙️</div>
+        <h3 style="font-size:18px;font-weight:800;margin-bottom:8px;">Pengaturan</h3>
+        <p style="font-size:14px;color:#555;">Konfigurasi sistem, profil pengguna, keamanan, dan preferensi aplikasi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. TEKNOLOGI -->
+<section class="section" id="teknologi">
+  <div class="container">
+    <span class="section-label">Teknologi</span>
+    <h2 class="section-title">Stack Teknologi</h2>
+    <p class="section-sub">Dibangun dengan teknologi modern dan terpercaya.</p>
+    <div class="grid-4">
+      <div class="tech-card"><div class="tech-icon">⚛️</div><h4>Frontend</h4><p>HTML, CSS, JS</p></div>
+      <div class="tech-card"><div class="tech-icon">⚙️</div><h4>Backend</h4><p>PHP / Laravel</p></div>
+      <div class="tech-card"><div class="tech-icon">🗄️</div><h4>Database</h4><p>MySQL / MariaDB</p></div>
+      <div class="tech-card"><div class="tech-icon">🧩</div><h4>Framework</h4><p>Bootstrap / Tailwind</p></div>
+      <div class="tech-card"><div class="tech-icon">🖥️</div><h4>Server</h4><p>Apache / Nginx</p></div>
+      <div class="tech-card"><div class="tech-icon">📦</div><h4>Library</h4><p>Chart.js, jQuery</p></div>
+      <div class="tech-card"><div class="tech-icon">🚀</div><h4>Deployment</h4><p>Vercel / Netlify</p></div>
+      <div class="tech-card"><div class="tech-icon">🔗</div><h4>Lainnya</h4><p>REST API, JSON</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. ARSITEKTUR -->
+<section class="section" id="arsitektur">
+  <div class="container text-center">
+    <span class="section-label">Arsitektur</span>
+    <h2 class="section-title">Arsitektur Sistem</h2>
+    <p class="section-sub mx-auto" style="max-width:500px;">Alur data dari pengguna hingga database.</p>
+    <div class="arch-diagram">
+      <div class="arch-node">🌐 Browser / Client</div>
+      <div class="arch-arrow">↓</div>
+      <div class="arch-node">🖥️ Web Server (Apache/Nginx)</div>
+      <div class="arch-arrow">↓</div>
+      <div class="arch-node">⚙️ Application (Laravel)</div>
+      <div class="arch-arrow">↓</div>
+      <div class="arch-node">🗄️ Database (MySQL)</div>
+    </div>
+    <p style="margin-top:24px;font-size:15px;color:#555;max-width:600px;margin-left:auto;margin-right:auto;">
+      Pengguna mengakses aplikasi melalui browser. Request diproses web server dan diteruskan ke aplikasi backend. Aplikasi berkomunikasi dengan database untuk menyimpan dan mengambil data, lalu mengembalikan respons dalam bentuk HTML/JSON.
+    </p>
+  </div>
+</section>
+
+<!-- 11. DATABASE -->
+<section class="section" id="database">
+  <div class="container">
+    <span class="section-label">Database</span>
+    <h2 class="section-title">Struktur Database</h2>
+    <p class="section-sub">Perancangan database yang efisien untuk performa optimal.</p>
+    <div class="grid-2">
+      <div class="brutal-card">
+        <h3 style="font-size:18px;font-weight:800;margin-bottom:12px;">📊 Gambaran Umum</h3>
+        <ul style="list-style:none;font-size:15px;color:#555;">
+          <li style="padding:6px 0;">• <strong>10+ tabel</strong> utama</li>
+          <li style="padding:6px 0;">• Relasi <strong>One-to-Many</strong> dan <strong>Many-to-Many</strong></li>
+          <li style="padding:6px 0;">• Normalisasi hingga <strong>3NF</strong></li>
+          <li style="padding:6px 0;">• Index strategis untuk <strong>query cepat</strong></li>
+        </ul>
+      </div>
+      <div class="brutal-card">
+        <h3 style="font-size:18px;font-weight:800;margin-bottom:12px;">🔗 Relasi Utama</h3>
+        <ul style="list-style:none;font-size:15px;color:#555;">
+          <li style="padding:6px 0;">• <strong>Users</strong> → Links (One-to-Many)</li>
+          <li style="padding:6px 0;">• <strong>Links</strong> → Clicks (One-to-Many)</li>
+          <li style="padding:6px 0;">• <strong>Users</strong> → Roles (Many-to-One)</li>
+          <li style="padding:6px 0;">• <strong>Categories</strong> → Links (One-to-Many)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="brutal-card mt-24 text-center" style="padding:40px;">
+      <p style="font-size:14px;color:#888;font-weight:600;">📋 ERD Diagram (Placeholder)</p>
+      <div style="margin-top:12px;border:2px dashed #CCC;padding:40px;background:#F8F8F4;">
+        <p style="color:#999;font-size:14px;">Entity Relationship Diagram akan ditampilkan di sini</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12. API -->
+<section class="section" id="api">
+  <div class="container">
+    <span class="section-label">API</span>
+    <h2 class="section-title">Dokumentasi API</h2>
+    <p class="section-sub">API RESTful untuk integrasi dengan aplikasi pihak ketiga.</p>
+    <table class="brutal-table">
+      <thead><tr><th>Method</th><th>URL</th><th>Parameter</th><th>Response</th></tr></thead>
+      <tbody>
+        <tr><td><strong>POST</strong></td><td><code>/api/links</code></td><td>url (string), custom (string, optional)</td><td>JSON — data tautan baru</td></tr>
+        <tr><td><strong>GET</strong></td><td><code>/api/links</code></td><td>page, limit, search</td><td>JSON — daftar tautan</td></tr>
+        <tr><td><strong>GET</strong></td><td><code>/api/links/{id}</code></td><td>—</td><td>JSON — detail tautan + statistik</td></tr>
+        <tr><td><strong>DELETE</strong></td><td><code>/api/links/{id}</code></td><td>—</td><td>JSON — konfirmasi hapus</td></tr>
+        <tr><td><strong>POST</strong></td><td><code>/api/auth/login</code></td><td>email, password</td><td>JSON — token + user data</td></tr>
+      </tbody>
+    </table>
+    <div class="grid-2 mt-24">
+      <div class="brutal-card">
+        <h4 style="font-weight:800;margin-bottom:8px;">📤 Contoh Request</h4>
+        <pre style="background:#F4F4F0;padding:16px;border:2px solid #000;font-size:13px;overflow-x:auto;">POST /api/links
+{
+  "url": "https://example.com/artikel/panjang",
+  "custom": "artikel-1"
+}</pre>
+      </div>
+      <div class="brutal-card">
+        <h4 style="font-weight:800;margin-bottom:8px;">📥 Contoh Response</h4>
+        <pre style="background:#F4F4F0;padding:16px;border:2px solid #000;font-size:13px;overflow-x:auto;">{
+  "status": "success",
+  "data": {
+    "short_url": "https://ring.kr/artikel-1",
+    "original_url": "https://example.com/artikel/panjang",
+    "clicks": 0
+  }
+}</pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 13. INSTALASI -->
+<section class="section" id="instalasi">
+  <div class="container">
+    <span class="section-label">Instalasi</span>
+    <h2 class="section-title">Langkah Instalasi</h2>
+    <p class="section-sub">Ikuti langkah-langkah berikut untuk menjalankan aplikasi di lingkungan Anda.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:800px;">
+      <div class="brutal-card" style="display:flex;align-items:center;gap:16px;">
+        <div style="font-size:28px;font-weight:900;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:2px solid #000;background:#FFD166;flex-shrink:0;">1</div>
+        <div><strong style="font-size:16px;">Clone Project</strong><br><span style="font-size:13px;color:#666;">git clone https://github.com/L9kyuu-AppWeb/ringkasurl.git</span></div>
+      </div>
+      <div class="brutal-card" style="display:flex;align-items:center;gap:16px;">
+        <div style="font-size:28px;font-weight:900;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:2px solid #000;background:#FFD166;flex-shrink:0;">2</div>
+        <div><strong style="font-size:16px;">Install Dependency</strong><br><span style="font-size:13px;color:#666;">composer install & npm install</span></div>
+      </div>
+      <div class="brutal-card" style="display:flex;align-items:center;gap:16px;">
+        <div style="font-size:28px;font-weight:900;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:2px solid #000;background:#FFD166;flex-shrink:0;">3</div>
+        <div><strong style="font-size:16px;">Konfigurasi Environment</strong><br><span style="font-size:13px;color:#666;">Salin .env.example ke .env, atur database</span></div>
+      </div>
+      <div class="brutal-card" style="display:flex;align-items:center;gap:16px;">
+        <div style="font-size:28px;font-weight:900;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:2px solid #000;background:#FFD166;flex-shrink:0;">4</div>
+        <div><strong style="font-size:16px;">Migrasi Database</strong><br><span style="font-size:13px;color:#666;">php artisan migrate --seed</span></div>
+      </div>
+      <div class="brutal-card" style="display:flex;align-items:center;gap:16px;">
+        <div style="font-size:28px;font-weight:900;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:2px solid #000;background:#FFD166;flex-shrink:0;">5</div>
+        <div><strong style="font-size:16px;">Jalankan Server</strong><br><span style="font-size:13px;color:#666;">php artisan serve & npm run dev</span></div>
+      </div>
+      <div class="brutal-card" style="display:flex;align-items:center;gap:16px;">
+        <div style="font-size:28px;font-weight:900;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:2px solid #000;background:#FFD166;flex-shrink:0;">6</div>
+        <div><strong style="font-size:16px;">Verifikasi</strong><br><span style="font-size:13px;color:#666;">Buka http://localhost:8000</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 14. REQUIREMENT -->
+<section class="section" id="requirement">
+  <div class="container">
+    <span class="section-label">Requirement</span>
+    <h2 class="section-title">Kebutuhan Sistem</h2>
+    <p class="section-sub">Pastikan server Anda memenuhi spesifikasi berikut.</p>
+    <div class="grid-3">
+      <div class="brutal-card">
+        <h3 style="font-size:18px;font-weight:800;margin-bottom:12px;">📉 Minimum</h3>
+        <ul style="list-style:none;font-size:14px;color:#555;">
+          <li style="padding:4px 0;">• PHP 8.0+</li>
+          <li style="padding:4px 0;">• MySQL 5.7+</li>
+          <li style="padding:4px 0;">• RAM 512 MB</li>
+          <li style="padding:4px 0;">• Storage 100 MB</li>
+        </ul>
+      </div>
+      <div class="brutal-card">
+        <h3 style="font-size:18px;font-weight:800;margin-bottom:12px;">📈 Rekomendasi</h3>
+        <ul style="list-style:none;font-size:14px;color:#555;">
+          <li style="padding:4px 0;">• PHP 8.2+</li>
+          <li style="padding:4px 0;">• MySQL 8.0+ / MariaDB 10+</li>
+          <li style="padding:4px 0;">• RAM 1 GB+</li>
+          <li style="padding:4px 0;">• SSD Storage</li>
+        </ul>
+      </div>
+      <div class="brutal-card">
+        <h3 style="font-size:18px;font-weight:800;margin-bottom:12px;">🌐 Dukungan</h3>
+        <ul style="list-style:none;font-size:14px;color:#555;">
+          <li style="padding:4px 0;">• Browser: Chrome, Firefox, Safari, Edge</li>
+          <li style="padding:4px 0;">• Hosting: Shared, VPS, Dedicated</li>
+          <li style="padding:4px 0;">• Platform: Linux, Windows</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 15. KEAMANAN -->
+<section class="section" id="keamanan">
+  <div class="container">
+    <span class="section-label">Keamanan</span>
+    <h2 class="section-title">Keamanan Terjamin</h2>
+    <p class="section-sub">Kami melindungi data dan tautan Anda dengan berbagai lapisan keamanan.</p>
+    <div class="tag-list">
+      <div class="tag-item"><span class="tag-icon">🔐</span> Authentication</div>
+      <div class="tag-item"><span class="tag-icon">🛡️</span> Authorization</div>
+      <div class="tag-item"><span class="tag-icon">👥</span> Role Permission</div>
+      <div class="tag-item"><span class="tag-icon">🔑</span> Password Hash</div>
+      <div class="tag-item"><span class="tag-icon">🔄</span> CSRF Protection</div>
+      <div class="tag-item"><span class="tag-icon">⚠️</span> XSS Prevention</div>
+      <div class="tag-item"><span class="tag-icon">💉</span> SQL Injection Prevention</div>
+      <div class="tag-item"><span class="tag-icon">⏳</span> Session Management</div>
+      <div class="tag-item"><span class="tag-icon">📋</span> Audit Log</div>
+      <div class="tag-item"><span class="tag-icon">💾</span> Backup</div>
+    </div>
+  </div>
+</section>
+
+<!-- 16. PERFORMA -->
+<section class="section" id="performa">
+  <div class="container">
+    <span class="section-label">Performa</span>
+    <h2 class="section-title">Optimal dan Cepat</h2>
+    <p class="section-sub">Aplikasi dioptimalkan untuk kecepatan dan efisiensi.</p>
+    <div class="tag-list">
+      <div class="tag-item"><span class="tag-icon">📄</span> Pagination</div>
+      <div class="tag-item"><span class="tag-icon">⚡</span> Caching</div>
+      <div class="tag-item"><span class="tag-icon">🔄</span> Lazy Loading</div>
+      <div class="tag-item"><span class="tag-icon">📊</span> Optimized Query</div>
+      <div class="tag-item"><span class="tag-icon">📱</span> Responsive Design</div>
+      <div class="tag-item"><span class="tag-icon">🚀</span> Fast Loading</div>
+    </div>
+  </div>
+</section>
+
+<!-- 17. STUDI KASUS -->
+<section class="section" id="studi-kasus">
+  <div class="container">
+    <span class="section-label">Studi Kasus</span>
+    <h2 class="section-title">Dampak Nyata</h2>
+    <p class="section-sub">Lihat bagaimana RingkasURL membantu bisnis berkembang.</p>
+    <div class="case-grid">
+      <div class="case-card case-before">
+        <h3>❌ Sebelum Menggunakan</h3>
+        <ul>
+          <li>Tautan panjang & sulit dibagikan</li>
+          <li>Tidak ada data klik & analitik</li>
+          <li>Manajemen tautan berantakan</li>
+          <li>Tidak bisa kustomisasi tautan</li>
+          <li>Rendahnya kepercayaan audiens</li>
+        </ul>
+      </div>
+      <div class="case-card case-after">
+        <h3>✅ Sesudah Menggunakan</h3>
+        <ul>
+          <li>Tautan pendek & profesional</li>
+          <li>Data analitik real-time akurat</li>
+          <li>Semua tautan terkelola rapi di dashboard</li>
+          <li>Tautan kustom sesuai merek</li>
+          <li>Meningkatkan click-through rate hingga 40%</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 18. FAQ -->
+<section class="section" id="faq">
+  <div class="container" style="max-width:800px;">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title">Pertanyaan Umum</h2>
+    <p class="section-sub">Temukan jawaban atas pertanyaan yang sering diajukan.</p>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Apa itu RingkasURL? <span class="faq-toggle">+</span></button>
+      <div class="faq-answer">RingkasURL adalah platform pemendek tautan modern yang memungkinkan Anda memperpendek, mengelola, dan memantau performa tautan dalam satu dashboard.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Apakah RingkasURL gratis? <span class="faq-toggle">+</span></button>
+      <div class="faq-answer">Ya, RingkasURL menyediakan paket gratis dengan fitur dasar. Tersedia juga paket premium dengan fitur tambahan seperti analitik lanjutan dan kustom domain.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Apakah saya bisa membuat tautan kustom? <span class="faq-toggle">+</span></button>
+      <div class="faq-answer">Tentu. Anda bisa membuat tautan pendek dengan kata kunci kustom sesuai keinginan, selama belum digunakan oleh pengguna lain.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Apakah RingkasURL aman digunakan? <span class="faq-toggle">+</span></button>
+      <div class="faq-answer">Sangat aman. Kami menerapkan enkripsi, validasi tautan otomatis, proteksi CSRF, XSS, SQL Injection, serta audit log untuk keamanan maksimal.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Bagaimana cara melihat statistik tautan? <span class="faq-toggle">+</span></button>
+      <div class="faq-answer">Setiap tautan memiliki halaman analitik yang menampilkan jumlah klik, geolokasi, referrer, dan tren pengunjung secara real-time.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Apakah ada fitur manajemen tim? <span class="faq-toggle">+</span></button>
+      <div class="faq-answer">Ya. RingkasURL mendukung multi-user dengan sistem role (Admin, Editor, Viewer) sehingga tim dapat berkolaborasi dengan aman.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Apakah saya bisa mengintegrasikan RingkasURL dengan aplikasi lain? <span class="faq-toggle">+</span></button>
+      <div class="faq-answer">Tersedia REST API yang memungkinkan Anda mengintegrasikan RingkasURL dengan aplikasi, website, atau layanan pihak ketiga.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Apakah data saya akan hilang jika tidak berlangganan? <span class="faq-toggle">+</span></button>
+      <div class="faq-answer">Data Anda tetap aman. Jika paket berakhir, tautan tetap aktif namun fitur premium tidak bisa digunakan hingga perpanjangan.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Browser apa saja yang didukung? <span class="faq-toggle">+</span></button>
+      <div class="faq-answer">RingkasURL mendukung semua browser modern: Google Chrome, Mozilla Firefox, Apple Safari, dan Microsoft Edge.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">Bagaimana cara menghubungi tim RingkasURL? <span class="faq-toggle">+</span></button>
+      <div class="faq-answer">Anda dapat menghubungi kami melalui WhatsApp di 085156822397, atau mengunjungi GitHub dan Instagram kami. Informasi kontak tersedia di bagian Kontak.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 19. LISENSI -->
+<section class="section" id="lisensi">
+  <div class="container text-center">
+    <span class="section-label">Lisensi</span>
+    <h2 class="section-title">Lisensi Aplikasi</h2>
+    <div class="brutal-card" style="max-width:600px;margin:0 auto;">
+      <p style="font-size:40px;margin-bottom:12px;">📄</p>
+      <h3 style="font-size:20px;font-weight:800;margin-bottom:8px;">MIT License</h3>
+      <p style="font-size:15px;color:#555;">RingkasURL dilisensikan di bawah MIT License. Anda bebas menggunakan, memodifikasi, dan mendistribusikan kembali aplikasi ini dengan tetap menyertakan atribusi kepada pengembang asli.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 20. KONTAK -->
+<section class="section" id="kontak">
+  <div class="container">
+    <span class="section-label">Kontak</span>
+    <h2 class="section-title">Hubungi Kami</h2>
+    <p class="section-sub">Punya pertanyaan atau butuh bantuan? Kami siap membantu.</p>
+    <div class="contact-grid">
+      <a href="https://wa.me/6285156822397" target="_blank" class="contact-card">
+        <div class="ct-icon" style="background:#25D366;color:#FFF;">💬</div>
+        <div><div class="ct-label">WhatsApp</div><div class="ct-value">085156822397</div></div>
+      </a>
+      <a href="https://github.com/L9kyuu-AppWeb" target="_blank" class="contact-card">
+        <div class="ct-icon" style="background:#1A1A1A;color:#FFF;">🐙</div>
+        <div><div class="ct-label">GitHub</div><div class="ct-value">L9kyuu-AppWeb</div></div>
+      </a>
+      <a href="https://www.instagram.com/next.buildapp/" target="_blank" class="contact-card">
+        <div class="ct-icon" style="background:#E4405F;color:#FFF;">📸</div>
+        <div><div class="ct-label">Instagram</div><div class="ct-value">@next.buildapp</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 21. FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-left">© 2026 RingkasURL. All rights reserved.</div>
+    <div class="footer-right">v1.0.0</div>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  item.classList.toggle('open');
+}
+</script>
+</body>
+</html>
