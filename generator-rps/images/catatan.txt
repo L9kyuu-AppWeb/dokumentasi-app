@@ -1,0 +1,2 @@
+ss_01, berisikan tampilan judul
+ss_02, berisikan tampilan hasil prompt untuk bisa di copy ke Chat AI Favorit
