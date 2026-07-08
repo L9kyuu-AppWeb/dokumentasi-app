@@ -87,22 +87,18 @@ Setiap screenshot memiliki:
 - Judul
 - Penjelasan singkat
 
+untuk link foto ambil ini dulu sebagai demo : 
+- https://l9kyuu-appweb.github.io/dokumentasi-app/devstore/images/page1.png
+- https://l9kyuu-appweb.github.io/dokumentasi-app/devstore/images/page2.png
+- https://l9kyuu-appweb.github.io/dokumentasi-app/devstore/images/page3.png
+bisa kamu gunakan berulang
 ---
 
-# 6. Video Demo
-
-Sediakan section video demo yang berisi:
-- Thumbnail
-- Tombol Play
-- Deskripsi video
-
----
-
-# 7. Alur Penggunaan
+# 6. Alur Penggunaan
 
 Buat flow penggunaan aplikasi.
 
-Misalnya:
+contohnya:
 
 Login
 ↓
@@ -120,9 +116,11 @@ Gunakan diagram sederhana.
 
 ---
 
-# 8. Role Pengguna
+# 7. Role Pengguna
 
 Buat tabel role.
+
+contoh,
 
 Kolom:
 - Role
@@ -131,9 +129,11 @@ Kolom:
 
 ---
 
-# 9. Modul Sistem
+# 8. Modul Sistem
 
 Kelompokkan modul menjadi:
+
+contoh:
 
 Master Data
 
@@ -149,7 +149,7 @@ Setiap modul dijelaskan manfaatnya.
 
 ---
 
-# 10. Teknologi
+# 9. Teknologi
 
 Pisahkan menjadi:
 
@@ -171,7 +171,7 @@ Tampilkan dalam bentuk card.
 
 ---
 
-# 11. Arsitektur Sistem
+# 10. Arsitektur Sistem
 
 Jelaskan arsitektur menggunakan diagram.
 
@@ -189,7 +189,7 @@ Tambahkan penjelasan singkat.
 
 ---
 
-# 12. Database
+# 11. Database
 
 Jelaskan:
 
@@ -201,7 +201,7 @@ Tidak perlu menjelaskan seluruh tabel secara detail.
 
 ---
 
-# 13. API
+# 12. API (opsional jika ada)
 
 Jika aplikasi memiliki API.
 
@@ -221,7 +221,7 @@ Contoh Response
 
 ---
 
-# 14. Instalasi
+# 13. Instalasi
 
 Buat langkah instalasi lengkap.
 
@@ -241,33 +241,7 @@ Verifikasi Instalasi
 
 ---
 
-# 15. Konfigurasi
-
-Jelaskan file konfigurasi.
-
-Contoh:
-
-APP_NAME
-
-APP_URL
-
-DB_HOST
-
-DB_DATABASE
-
-DB_USERNAME
-
-DB_PASSWORD
-
-MAIL
-
-Storage
-
-Cache
-
----
-
-# 16. Requirement Server
+# 14. Requirement Server
 
 Pisahkan menjadi:
 
@@ -281,7 +255,7 @@ Hosting Support
 
 ---
 
-# 17. Keamanan
+# 15. Keamanan
 
 Jelaskan fitur keamanan seperti:
 
@@ -307,7 +281,7 @@ Backup
 
 ---
 
-# 18. Performa
+# 16. Performa
 
 Jelaskan optimasi yang digunakan.
 
@@ -327,7 +301,7 @@ Fast Loading
 
 ---
 
-# 19. Studi Kasus
+# 17. Studi Kasus
 
 Buat studi kasus:
 
@@ -341,61 +315,37 @@ Tampilkan perubahan manfaat yang dirasakan pengguna.
 
 ---
 
-# 20. FAQ
+# 18. FAQ
 
 Buat minimal 10 pertanyaan yang sering ditanyakan.
 
 ---
 
-# 21. Roadmap
-
-Buat roadmap versi aplikasi.
-
-v1.0
-
-v1.5
-
-v2.0
-
-Future Plan
-
----
-
-# 22. Lisensi
+# 19. Lisensi
 
 Buat section lisensi aplikasi.
 
 ---
 
-# 23. Kontak
+# 20. Kontak
 
 Berisi:
 
-WhatsApp
+WhatsApp : 085156822397
 
-Email
+GitHub : https://github.com/L9kyuu-AppWeb
 
-Website
-
-GitHub
-
-Media Sosial
+Instagram : https://www.instagram.com/next.buildapp/
 
 ---
 
-# 24. Footer
+# 21. Footer
 
 Berisi:
 
 Copyright
 
 Versi aplikasi
-
-Link Dokumentasi
-
-Privacy Policy
-
-Terms of Service
 
 ---
 
@@ -408,3 +358,8 @@ Terms of Service
 - Gunakan gaya seperti website dokumentasi produk SaaS modern (misalnya Laravel, Supabase, Vercel, atau Figma)
 - Sertakan placeholder untuk gambar, video, diagram, dan ikon agar mudah diganti dengan aset asli.
 - Gunakan format Markdown agar mudah dipindahkan ke berbagai platform dokumentasi atau website.
+
+
+semua diatas hanyalah sebagai contoh dari pointnya, kamu bisa sesuaikan dengan kebutuhan aplikasi saya, dan buatlah dokumentasi yang profesional, modern, clean, mudah dipahami, meyakinkan calon pengguna, dan cocok dijadikan landing page produk.
+
+gunakan UI Neobrutalism

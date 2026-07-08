@@ -1,0 +1,6 @@
+ss_01 = Link Management,
+ss_02 = Real-time Analytics
+ss_03 = Kustomisasi Tampilan
+ss_04 = Live Preview
+ss_05 = Login
+ss_06 = Register
